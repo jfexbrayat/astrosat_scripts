@@ -36,7 +36,7 @@ print(df_summary)
 print(df_summary.corr())
 
 # plot using the df method
-df_summary.plot(kind='bar',color=['blue','red'],figsize=(8,4))
+df_summary.plot(kind='bar',color=['blue','red'],figsize=(8,4),width=.8)
 
 plt.ylabel('fraction of total active fires detected')
 plt.xlabel('month')
