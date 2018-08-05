@@ -25,7 +25,12 @@ the three confidence classes
 # Required python modules
 
 The scripts work with the following modules under Python 3.6.1
-Cartopy==0.16.0
+
+Cartopy==0.16.0 #high resolution shapefiles and masks may have to be downloaded
+when running the code for the first time, which will raise a warning
+
 matplotlib==2.0.2
+
 pandas==0.20.1
+
 scipy==0.19.0
