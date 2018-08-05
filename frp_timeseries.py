@@ -34,6 +34,8 @@ viirs_median = df_viirs.frp_m2.resample('M').median()
 
 # calculate correlation and std
 print("Pearson's correlation: ", pearsonr(modis_median,viirs_median))
+print('std MODIS: ', modis_median.std())
+print('std VIIRS: ', viirs_median.std())
 
 # instantiate a figure to plot median frp
 plt.figure('time series');plt.clf()
