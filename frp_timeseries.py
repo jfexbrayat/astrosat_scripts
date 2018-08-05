@@ -33,10 +33,10 @@ df_viirs = df_viirs['2013-01-01':'2017-12-31']
 modis_median = df_modis.frp_m2.resample('M').median()
 viirs_median = df_viirs.frp_m2.resample('M').median()
 
-# calculate correlation and std
+# calculate correlation and mean
 print("Pearson's correlation: ", pearsonr(modis_median,viirs_median))
-print('std MODIS: ', modis_median.std())
-print('std VIIRS: ', viirs_median.std())
+print('mean MODIS FRP: ', modis_median.mean())
+print('mean VIIRS FRP: ', viirs_median.mean())
 
 # instantiate a figure to plot median frp
 plt.figure('time series');plt.clf()
