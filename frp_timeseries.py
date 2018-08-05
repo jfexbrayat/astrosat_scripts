@@ -8,6 +8,7 @@ seen by MODIS and VIIRS during 2013-2017
 import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.stats import pearsonr
+import os
 
 # read data files
 df_modis = pd.read_csv('../data/fire_archive_M6_12555.csv')
@@ -54,4 +55,7 @@ plt.legend(loc='lower left')
 
 plt.grid(True,ls=':')
 
+#check that figures folder exist and save figure there
+if 'figures' not in os.listdir('..'):
+    os.mkdir('../figures')
 plt.savefig('../figures/frp_timeseries.png',bbox_inches='tight')

@@ -7,6 +7,7 @@ This script plots maps of fire distribution seen by MODIS and VIIRS during 2013-
 import matplotlib.pyplot as plt
 import pandas as pd
 from mpl_toolkits.axes_grid1 import AxesGrid
+import os
 
 # import projection, features and utils from cartopy
 from cartopy.crs import PlateCarree
@@ -70,5 +71,7 @@ for ii, df in enumerate([df_modis,df_viirs]):
 
     ax.grid(True,ls=':')
 
-#save figure
+#check that figures folder exist and save figure there
+if 'figures' not in os.listdir('..'):
+    os.mkdir('../figures')
 fig.savefig('../figures/spatial_distribution.png',bbox_inches='tight')

@@ -8,6 +8,7 @@ by MODIS and VIIRS during 2013-2017
 import matplotlib.pyplot as plt
 import pandas as pd
 from scipy.stats import pearsonr
+import os
 
 # read the csv with data
 df_modis = pd.read_csv('../data/fire_archive_M6_12555.csv')
@@ -44,4 +45,7 @@ plt.xlabel('month')
 #use month initials
 plt.xticks(range(12),['J','F','M','A','M','J','J','A','S','O','N','D'],rotation=0)
 
+#check that figures folder exist and save figure there
+if 'figures' not in os.listdir('..'):
+    os.mkdir('../figures')
 plt.savefig('../figures/fire_seasonality.png',bbox_inches='tight')

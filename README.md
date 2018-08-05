@@ -7,7 +7,7 @@ dataset in the ../data/ directory and save figures in a ../figures/ directory
 Easiest is to clone in the astrosat_data_science_test folder using
 git clone https://github.com/jfexbrayat/astrosat_scripts.git
 
-#Overview of scripts
+# Overview of scripts
 
 fire_seasonality.py
 produces a barplot of fraction of fire in each calendar monthly
