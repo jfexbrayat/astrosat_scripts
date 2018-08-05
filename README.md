@@ -5,7 +5,7 @@ Scripts below have to be placed in a folder so that they can access the
 dataset in the ../data/ directory and save figures in a ../figures/ directory
 
 Easiest is to clone in the astrosat_data_science_test folder using
-git clone https://github.com/jfexbrayat/astrosat_scripts.git
+"git clone https://github.com/jfexbrayat/astrosat_scripts.git"
 
 # Overview of scripts
 
