@@ -37,8 +37,8 @@ print("Pearson's correlation: ", pearsonr(modis_median,viirs_median))
 plt.figure('time series');plt.clf()
 
 #plot
-modis_median.plot(color='blue',label='MODIS')
-viirs_median.plot(color='red',label='VIIRS')
+modis_median.plot(color='blue',label='MODIS',style='-o')
+viirs_median.plot(color='red',label='VIIRS',style='-o')
 
 # adjust labels
 plt.ylabel('Fire radiative power [W m$^{-2}$]')
